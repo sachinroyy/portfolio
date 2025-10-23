@@ -70,19 +70,8 @@ export default function Testimonials() {
                 </p>
                 
                 <div className="flex items-center justify-center space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-2xl text-purple-400 font-bold border-2 border-purple-600 overflow-hidden">
-                    {testimonial.image ? (
-                      <img 
-                        alt={testimonial.name} 
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=4F46E5&color=fff`;
-                        }}
-                      />
-                    ) : (
-                      testimonial.name.split(' ').map(n => n[0]).join('').toUpperCase()
-                    )}
+                  <div className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-2xl text-purple-400 font-bold border-2 border-purple-600">
+                    {testimonial.name.split(' ').map(n => n[0]).join('').toUpperCase()}
                   </div>
                   <div className="text-left">
                     <h4 className="text-lg font-semibold text-white">
